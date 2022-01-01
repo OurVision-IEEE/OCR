@@ -1,5 +1,35 @@
 # DocOCR
 
+## Download dependencies
+
+```sh
+sudo apt-get update
+sudo apt-get --fix-missing install libleptonica-dev libtesseract-dev tesseract-ocr-all libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl-dev -y
+pip3 install opencv-python pytesseract
+```
+
+## Code 
+
+```py
+import cv2
+import pytesseract
+from PIL import Image
+
+class DocOCR:
+    def __init__(self, imagePath:str=None, image=None):
+        if imagePath:
+            self.imagePath:str=imagePath
+            self.image=cv2.imread(imagePath)
+        if image:
+            self.image=image
+        assert self.image is not None
+        self.image = cv2.cvtColor(self.image, cv2.COLOR_BGR2RGB)
+
+    def ocr(self) -> str:
+        return pytesseract.image_to_string(self.image)
+    
+```
+
 Output for original-image from DocOCR:
 
 ```
