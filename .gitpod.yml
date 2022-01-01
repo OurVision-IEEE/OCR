@@ -1,10 +1,12 @@
 # List the start up tasks. Learn more https://www.gitpod.io/docs/config-start-tasks/
 tasks:
   - init: |
-      sudo apt-get install libleptonica-dev libtesseract-dev tesseract-ocr-all -y
+      sudo apt-get update
+      sudo apt-get --fix-missing install libleptonica-dev libtesseract-dev tesseract-ocr-all libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl-dev -y
       pip3 install opencv-python pytesseract
     command: |
-      sudo apt-get install libleptonica-dev libtesseract-dev tesseract-ocr-all -y
+      sudo apt-get update
+      sudo apt-get --fix-missing install libleptonica-dev libtesseract-dev tesseract-ocr-all libxrandr-dev libxinerama-dev libxcursor-dev libxi-dev libgl-dev -y
       pip3 install opencv-python pytesseract
 
 # List the ports to expose. Learn more https://www.gitpod.io/docs/config-ports/
