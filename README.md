@@ -1,4 +1,4 @@
-# DocOCR
+# OCR
 
 ## Download dependencies
 
@@ -9,6 +9,8 @@ pip3 install opencv-python pytesseract
 ```
 
 ## Code 
+
+### DocOCR
 
 ```py
 import cv2
@@ -30,7 +32,13 @@ class DocOCR:
     
 ```
 
-Output for original-image from DocOCR:
+### SceneOCR
+
+```py
+pass
+```
+
+### Output for original-image from DocOCR:
 
 ```
 Is It Possible To Go Completely Paperless In A Law Office? | Above ... http://abovethelaw.com/2014/07/is-it-possible-to-go-completely-pape...
